@@ -1,0 +1,45 @@
+.electric-content {
+    border: 1px solid #000;
+    width: 1000px;
+    height: 600px;
+    overflow: scroll;
+    position: relative;
+    margin-top: 10px;
+}
+
+.electric-data {
+    border: 1px solid #000;
+    width: 300px;
+    position: absolute;
+    left: 1100px;
+    top: 100px;
+    padding: 20px;
+}
+
+.electric-edit {
+    border: 1px solid #000;
+    width: 300px;
+    position: absolute;
+    left: 1500px;
+    top: 100px;
+    padding: 20px;
+}
+
+.contant {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: red;
+    width: 80px;
+    border: 1px solid #eee;
+    color: #fff;
+}
+
+dl {
+    margin-bottom: 0;
+}
+
+/*#preview{width:260px;height:190px;border:1px solid #000;overflow:hidden;}*/
+#imghead {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+}
