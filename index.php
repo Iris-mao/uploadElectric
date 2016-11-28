@@ -21,16 +21,71 @@
         </ul>
     </div>
     <div class="form-group btn btn-primary"><a href="add_electric.php" style="color: #fff;">添加电路图</a></div>
+    <div class="btn-group">
+        <button class="btn btn-default _enlarge" type="button">
+            <span class="glyphicon glyphicon-plus-sign"></span></button>
+        <button class="btn btn-default _ensmall" type="button">
+            <span class="glyphicon glyphicon-minus-sign"></span></button>
+    </div>
 </div>
-<div class="electric-content">
-    <div id="preview">
-        <img id="imghead" src="">
+<div class="electric-wrap">
+    <div class="electric-content" id="scale">
+        <div id="preview">
+            <img id="imghead" src="">
+        </div>
     </div>
 </div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+    (function () {
+        var num = 0.4;
+        $('._enlarge').click(function () {
+            if (num < 1) {
+                num = num + 0.1;
+                var obj = document.getElementById("scale");
+                obj.style.webkitTransform = "translate(0,0) scale(" + num + ")";
+            } else {
+                return false;
+            }
+        });
+        $('._ensmall').click(function () {
+            if (num > 0.4) {
+                num = num - 0.1;
+                var obj = document.getElementById("scale");
+                obj.style.webkitTransform = "translate(0,0) scale(" + num + ")";
+            } else {
+                return false;
+            }
+        });
+        var scrollFunc = function (e) {
+            if (e.wheelDelta > 0 || e.detail == -3) {
+                if (num < 1) {
+                    num = num + 0.05;
+                    var obj = document.getElementById("scale");
+                    obj.style.webkitTransform = "translate(0,0) scale(" + num + ")";
+                } else {
+                    return false;
+                }
+            } else {
+                if (num > 0.4) {
+                    num = num - 0.05;
+                    var obj = document.getElementById("scale");
+                    obj.style.webkitTransform = "translate(0,0) scale(" + num + ")";
+                } else {
+                    return false;
+                }
+            }
+
+        };
+        window.onmousewheel = document.onmousewheel = scrollFunc;
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', scrollFunc);
+        }
+    })();
+</script>
 <script>
     var demo_data_json = {
         'id': 1,
