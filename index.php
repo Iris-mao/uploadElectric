@@ -46,7 +46,7 @@
             if (num < 1) {
                 num = num + 0.1;
                 var obj = document.getElementById("scale");
-                obj.style.webkitTransform = "translate(0,0) scale(" + num + ")";
+                obj.style.webkitTransform = "scale(" + num + ")";
             } else {
                 return false;
             }
@@ -55,7 +55,7 @@
             if (num > 0.4) {
                 num = num - 0.1;
                 var obj = document.getElementById("scale");
-                obj.style.webkitTransform = "translate(0,0) scale(" + num + ")";
+                obj.style.webkitTransform = "scale(" + num + ")";
             } else {
                 return false;
             }
@@ -65,7 +65,7 @@
                 if (num < 1) {
                     num = num + 0.05;
                     var obj = document.getElementById("scale");
-                    obj.style.webkitTransform = "translate(0,0) scale(" + num + ")";
+                    obj.style.webkitTransform = "scale(" + num + ")";
                 } else {
                     return false;
                 }
@@ -73,7 +73,7 @@
                 if (num > 0.4) {
                     num = num - 0.05;
                     var obj = document.getElementById("scale");
-                    obj.style.webkitTransform = "translate(0,0) scale(" + num + ")";
+                    obj.style.webkitTransform = "scale(" + num + ")";
                 } else {
                     return false;
                 }

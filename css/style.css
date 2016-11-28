@@ -1,11 +1,13 @@
-.electric-content {
+.electric-wrap {
     border: 1px solid #000;
     width: 1000px;
     height: 600px;
-    overflow: scroll;
+    overflow: hidden;
     position: relative;
     margin-top: 10px;
 }
+#scale { -webkit-transform: scale(0.4, 0.4); -webkit-transform-origin: 0 0;
+    -moz-transform: scale(0.4, 0.4); -moz-transform-origin: 0 0; }
 
 .electric-data {
     border: 1px solid #000;

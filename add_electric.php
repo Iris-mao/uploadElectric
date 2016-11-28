@@ -13,9 +13,11 @@
     <input type="file" onchange="previewImage(this)"/>
     <!--    <button type="button" class="add">add</button>-->
 </div>
-<div class="electric-content">
-    <div id="preview">
-        <img id="imghead" src="img/electric1.png">
+<div class="electric-wrap" style="overflow: scroll;">
+    <div class="electric-content">
+        <div id="preview">
+            <img id="imghead" src="img/electric1.png">
+        </div>
     </div>
 </div>
 <div class="electric-data">
